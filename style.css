@@ -1,0 +1,236 @@
+/* Variáveis de cores */
+:root {
+    --primary-color: #2e7d32; /* Verde escuro */
+    --primary-color-hover: #1b5e20; /* Verde mais escuro */
+    --background-color: #121212; /* Fundo escuro */
+    --text-color: #e0e0e0; /* Texto claro */
+    --table-header-color: #2e7d32; /* Verde escuro */
+    --table-header-text-color: #ffffff; /* Texto branco */
+    --table-row-even-color: #1e1e1e; /* Linha par escura */
+    --table-row-hover-color: #333333; /* Linha ao passar o mouse */
+    --input-border-color: #424242; /* Borda dos inputs */
+    --input-focus-shadow: rgba(46, 125, 50, 0.5); /* Sombra ao focar no input */
+}
+
+/* Estilos gerais */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+}
+
+h1, h2 {
+    color: var(--primary-color);
+}
+
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tabs button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.tabs button i {
+    margin-right: 8px;
+}
+
+.tabs button:hover {
+    background-color: var(--primary-color-hover);
+}
+
+.tab-content {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 10px;
+}
+
+form input {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid var(--input-border-color);
+    border-radius: 5px;
+    background-color: #333;
+    color: var(--text-color);
+}
+
+form button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+form button i {
+    margin-right: 8px;
+}
+
+form button:hover {
+    background-color: var(--primary-color-hover);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #424242;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+
+th {
+    background-color: var(--table-header-color);
+    color: var(--table-header-text-color);
+}
+
+tr:nth-child(even) {
+    background-color: var(--table-row-even-color);
+}
+
+tr:hover {
+    background-color: var(--table-row-hover-color);
+}
+
+#searchEmprestimo, #searchLivro {
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid var(--input-border-color);
+    border-radius: 5px;
+    width: 100%;
+    background-color: #333;
+    color: var(--text-color);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+}
+
+#searchEmprestimo:focus, #searchLivro:focus {
+    box-shadow: 0 0 10px var(--input-focus-shadow);
+    outline: none;
+}
+
+/* Estilo para o botão de devolver */
+.devolver-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.devolver-button i {
+    margin-right: 5px;
+}
+
+.devolver-button:hover {
+    background-color: var(--primary-color-hover);
+}
+
+/* Media Queries para telas menores */
+@media (max-width: 768px) {
+    .tabs {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .tabs button {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .tab-content {
+        padding: 10px;
+    }
+
+    form input, form button {
+        width: 100%;
+    }
+
+    table, th, td {
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1, h2 {
+        font-size: 1.5em;
+    }
+
+    form label {
+        font-size: 0.9em;
+    }
+
+    form input, form button {
+        font-size: 0.9em;
+    }
+
+    table, th, td {
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+}
+.devolver-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.devolver-button i {
+    margin-right: 5px;
+}
+
+.devolver-button:hover {
+    background-color: var(--primary-color-hover);
+}
